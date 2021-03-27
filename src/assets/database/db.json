@@ -1,0 +1,138 @@
+{
+    "airlines": {
+        "passenger": [
+            {
+                "id": 1,
+                "flightid": 1,
+                "name": "pass1",
+                "seatNo": "A1",
+                "ancillary": {
+                    "meal": {
+                        "required": "yes",
+                        "sandwhich": "180"
+                    },
+                    "priority_boarding": "yes"
+                },
+                "inflightshop": {
+                    "enabled": "yes",
+                    "items": {
+                        "watch": "6779"
+                    }
+                },
+                "checkin": "yes",
+                "wheelchair": "",
+                "infants": "",
+                "passport": "NA",
+                "address": "CRPF Camp",
+                "dob": "09-02-1999"
+            },
+            {
+                "id": 2,
+                "flightid": 2,
+                "name": "pass2",
+                "seatNo": "A2",
+                "ancillary": {
+                    "meal": {
+                        "required": "no"
+                    },
+                    "priority_boarding": "no"
+                },
+                "inflightshop": {
+                    "enabled": "no"
+                },
+                "checkin": "yes",
+                "wheelchair": "",
+                "infants": "",
+                "passport": "S7097676",
+                "address": "NA",
+                "dob": "NA"
+            }
+        ],
+        "staff": [
+            {
+                "id": 1,
+                "username": "staff1",
+                "password": "staff1"
+            },
+            {
+                "id": 2,
+                "username": "staff2",
+                "password": "staff2"
+            }
+        ],
+        "admin": {
+            "username": "admin",
+            "password": "admin"
+        },
+        "flight": [
+            {
+                "flightid": 1,
+                "name": "Indigo",
+                "arrival": "10:45 pm",
+                "departure": "11:15 pm",
+                "seats_chekin": {
+                    "A1": "checkin",
+                    "B1": "available",
+                    "C1": "booked",
+                    "D1": "",
+                    "E1": "",
+                    "F1": "",
+                    "A2": "",
+                    "B2": "",
+                    "C2": "",
+                    "D2": "",
+                    "E2": "",
+                    "F2": ""
+                },
+                "ancillary": {
+                    "meal": {
+                        "sandwhich": "180",
+                        "samosa": "99",
+                        "maggi": "150",
+                        "tea": "60"
+                    },
+                    "priority_boarding": "yes"
+                },
+                "shopiems": {
+                    "watch": "6779",
+                    "shoes": "9988",
+                    "tshirt": "1200"
+                }
+            },
+            {
+                "flightid": 2,
+                "name": "Spicejet",
+                "arrival": "09:00 am",
+                "departure": "09:30 am",
+                "seats_chekin": {
+                    "A1": "checkin",
+                    "B1": "available",
+                    "C1": "booked",
+                    "D1": "",
+                    "E1": "",
+                    "F1": "",
+                    "A2": "",
+                    "B2": "",
+                    "C2": "",
+                    "D2": "",
+                    "E2": "",
+                    "F2": ""
+                },
+                "ancillary": {
+                    "meals": {
+                        "sandwhich": "180",
+                        "samosa": "99",
+                        "maggi": "150",
+                        "tea": "60"
+                    },
+                    "priority_boarding": "yes"
+                },
+                "shopiems": {
+                    "watch": "6779",
+                    "shoes": "9988",
+                    "tshirt": "1200"
+                }
+            }
+        ]
+    }
+}
