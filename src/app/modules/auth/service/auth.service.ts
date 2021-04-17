@@ -7,7 +7,7 @@ export class AuthService {
 
   constructor() { }
 
-  staffLogin(username:string,password:string){
+  staffLogin(){
     
   }
 }

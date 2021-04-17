@@ -1,5 +1,4 @@
 {
-    "airlines": {
         "passenger": [
             {
                 "id": 1,
@@ -93,7 +92,7 @@
                     },
                     "priority_boarding": "yes"
                 },
-                "shopiems": {
+                "shopping-items": {
                     "watch": "6779",
                     "shoes": "9988",
                     "tshirt": "1200"
@@ -127,12 +126,11 @@
                     },
                     "priority_boarding": "yes"
                 },
-                "shopiems": {
+                "shopitems": {
                     "watch": "6779",
                     "shoes": "9988",
                     "tshirt": "1200"
                 }
             }
         ]
-    }
 }
