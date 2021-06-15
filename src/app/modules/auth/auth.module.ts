@@ -4,15 +4,24 @@ import { CommonModule } from '@angular/common';
 import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoadingSpinnerComponent } from '../../shared/component/loading-spinner/loading-spinner.component';
+import { ForgetPasswordComponent } from './component/forget-password/forget-password.component';
+import { SharedModule } from 'src/app/shared/shared.module';
+
+
 
 
 @NgModule({
-  declarations: [AuthComponent],
+  declarations: [AuthComponent, ForgetPasswordComponent],
   imports: [
     CommonModule,
     AuthRoutingModule,
     ReactiveFormsModule,
-    FormsModule
-  ]
+    FormsModule,
+    SharedModule
+  ],
+  exports:[AuthComponent, ForgetPasswordComponent],
+  providers: [],
 })
+
 export class AuthModule { }

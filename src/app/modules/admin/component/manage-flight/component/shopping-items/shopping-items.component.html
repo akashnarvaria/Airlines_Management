@@ -1,0 +1,29 @@
+<div class="container my-3">
+    <div *ngIf="isLoading" class="text-center">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+      <div class="row" *ngIf="!isLoading">
+        
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <h1 class="text-center">Shopping Items</h1>
+            <div class="row">
+                <div class="col-lg-4" *ngFor="let item of flightShopDetail;let i=index">
+                    <div class="card mb-3" style="width: 18rem;">
+                        <img  src="{{item.itemLink}}">
+                        <div class="card-body">
+                          <h2 class="card-title">{{item.item | titlecase}}</h2>
+                          <p class="card-text">Price : {{item.price}}</p>
+                            <a routerLink="../../edit-shopping-items/{{index}}/{{i}}"><button class="btn btn-outline-primary" >Edit</button></a>&nbsp;
+                            <button class="btn btn-outline-danger" (click)="onDelete(i)">Remove</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="add-icon">
+                <a routerLink="../../add-shopping-items/{{index}}" style="color: dodgerblue;"><i class="fa fa-plus" aria-hidden="true"></i><br></a>
+            </div>
+          </div>
+          
+      </div>
+  </div>
+  

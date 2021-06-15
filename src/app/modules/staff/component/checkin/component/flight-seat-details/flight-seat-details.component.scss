@@ -1,0 +1,49 @@
+.seat{
+    border-radius: 50%;
+    box-shadow: 0 5px 8px 0 rgba(254, 254, 255, 0.822);
+    height: 40px;
+    width: 40px;
+}
+.checkin-key{
+    background: rgb(67, 105, 136);
+
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 5px 8px 0 rgba(254, 254, 255, 0.822);
+}
+.not-checkin-key{
+    background: rgb(214, 135, 89);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 5px 8px 0 rgba(254, 254, 255, 0.822);
+}
+
+.not-booked-key{
+    background: rgb(145, 136, 136);
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 5px 8px 0 rgba(254, 254, 255, 0.822);
+}
+
+.btn-checkin{
+    // background: rgb(67, 105, 136);
+    background: rgb(67, 105, 136);
+    color:white;
+    border: none;
+}
+.btn-not-booked{
+    background: rgb(145, 136, 136);
+    color:white;
+    border: none;
+}
+.btn-not-checkin{
+    background: rgb(214, 135, 89);
+    color:white;
+    border: none;
+}
+.tab-btn{
+    border:none;
+}

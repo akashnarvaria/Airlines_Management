@@ -1,0 +1,17 @@
+.seat{
+    border-radius: 50%;
+    box-shadow: 0 5px 8px 0 rgba(254, 254, 255, 0.822);
+    height: 40px;
+    width: 40px;
+}
+.btn-booked{
+    // background: rgb(67, 105, 136);
+    background: rgb(53, 188, 196);
+    color:white;
+    border: none;
+}
+.btn-available{
+    background: rgb(145, 136, 136);
+    color:white;
+    border: none;
+}

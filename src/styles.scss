@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
 a:hover{
-    font-size: large;
+    color: red !important; 
+    cursor: pointer;
 }
+a{
+    text-decoration: none !important;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.bg {
+    background-image: url("/assets/images/airplane-background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%
+  }

@@ -1,0 +1,85 @@
+<div class="container-fluid" *ngIf="!change_Seat">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12">
+        <h1 class="text-center text-primary">Passenger Details</h1>
+        <div class="row">
+
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <!-- apply filter by name -->
+            <div class="form-group">
+              <input type="text" (keyup)="applyFilter()" class="form-control" name="input" placeholder="Filter By Name"
+                [(ngModel)]="input">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <!-- apply filter by checkin -->
+            <div class="form-group">
+              <input type="text" (keyup)="applyFilterByCheckin()" class="form-control" name="checkinFilter"
+                placeholder="Filter By Checkin" [(ngModel)]="checkinFilter">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <!-- apply filter by Wheelchair -->
+            <div class="form-group">
+              <input type="text" (keyup)="applyFilterByWheelchair()" class="form-control" name="wheelchair"
+                placeholder="Filter By Wheelchair" [(ngModel)]="wheelchair">
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3">
+            <!-- apply filter by Infants -->
+            <div class="form-group">
+              <input type="text" (keyup)="applyFilterByInfants()" class="form-control" name="infants"
+                placeholder="Filter By Infants" [(ngModel)]="infants">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th style="font-weight: normal;" scope="col">Passenger Name</th>
+              <th style="font-weight: normal;" scope="col">Flight Name</th>
+              <th style="font-weight: normal;" scope="col">Passenger Seat</th>
+              <th style="font-weight: normal;" scope="col">Meal</th>
+              <th style="font-weight: normal;" scope="col">Other Services</th>
+              <th style="font-weight: normal;" scope="col">Infants</th>
+              <th style="font-weight: normal;" scope="col">Wheel Chair</th>
+              <th style="font-weight: normal;" style="font-weight: normal;" scope="col">CheckIn seat</th>
+              <th style="font-weight: normal;" scope="col">Change seat</th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let pDetail of passengerDetail;let i=index" >
+              <td scope="row">{{pDetail.name | titlecase}}</td>
+              <td scope="row">{{pDetail.flightname | titlecase}}</td>
+              <td>{{pDetail.seatNo}}</td>
+              <td>
+                <span *ngIf="passengerDetail[i].ancillary.mealRequired">
+                  <span *ngFor="let meal of passengerDetail[i].ancillary.meal;let j=index">{{j+1}}) {{meal.mealName | titlecase}}<br></span>
+                </span>
+                <span *ngIf="!passengerDetail[i].ancillary.mealRequired">No meal taken</span>
+              </td>
+              <td><span *ngFor="let service of passengerDetail[i].ancillary.services;let k=index">{{k+1}}) {{service.service | titlecase}}<br></span></td>
+              <td>{{pDetail.infants?'Yes':'No'}}</td>
+              <td>{{pDetail.wheelchair?'Yes':'No'}}</td>
+              <td><button class="btn btn-outline-primary" (click)="passengerCheckinInFlight(pDetail.flightid,pDetail.seatNo)">{{pDetail.checkin==false?'Checkin':'Undo'}}</button></td>
+              <td><a class="text-primary" style="font-size: medium;" (click)="changeSeat(pDetail.id,pDetail.flightid)">change seat</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid" *ngIf="change_Seat">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-lg-1 col-md-1 col-sm-1" *ngFor="let j of flightDetail"><button (click)="changeSeatInPassenger(j.sno)"   [ngClass]="j.available===true?'btn-available':'btn-booked'" class="p-2 mb-4 seat">{{j.sno}}</button></div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn-primary float-right" (click)="goBack()">GO BACK</button>
+  </div>

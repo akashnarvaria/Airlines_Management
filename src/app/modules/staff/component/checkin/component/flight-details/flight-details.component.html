@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+      <h1 class="text-center text-primary">Flight Details</h1>
+        <div class="form-group">
+          <input type="text" (keyup)="applyFilter()" class="form-control" name="input" placeholder="Filter By Arrival Time..."[(ngModel)]="input">
+        </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th style="font-weight: normal;" scope="col">Flight Id</th>
+            <th style="font-weight: normal;" scope="col">Flight Name</th>
+            <th style="font-weight: normal;" scope="col">Arrival Time</th>
+            <th style="font-weight: normal;" scope="col">Departure Time</th>
+            <th style="font-weight: normal;" scope="col">Seat Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let flightDetail of flightDetail">
+            <th scope="row">{{flightDetail.flightid}}</th>
+            <td>{{flightDetail.name}}</td>
+            <td>{{flightDetail.arrival}}</td>
+            <td>{{flightDetail.departure}}</td>
+            <td><a routerLink="../flight-seat-details/{{flightDetail.flightid}}">Click here for details</a></td>
+          </tr>
+
+        </tbody>
+      </table>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,198 @@
+<div class="container-fluid">
+  <div *ngIf="isLoading" class="text-center">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+  <div class="row" *ngIf="!isLoading">
+    <ul class="nav nav-pills mb-3">
+      <li class="nav-item">
+        <button class="nav-link mr-1" [ngClass]="seatStatus==='checkin'?'btn btn-primary':'btn btn-light'"
+          (click)="tab('checkin')">Checkin/Not-Checkin</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link mr-1" [ngClass]="seatStatus==='infants'?'btn btn-primary':'btn btn-light'"
+          (click)="tab('infants')">Infants</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link mr-1" [ngClass]="seatStatus==='wheelchair'?'btn btn-primary':'btn btn-light'"
+          (click)="tab('wheelchair')">Wheelchair</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" [ngClass]="seatStatus==='meal'?'btn btn-primary':'btn btn-light'"
+          (click)="tab('meal')">Meal</button>
+      </li>
+    </ul>
+    <hr>
+    
+    <div class="row" *ngIf="seatStatus=='checkin'">
+      <div class="col-md-8 col-lg-8 col-sm-8">
+        <div class="row">
+          <div class="col-lg-1 col-md-1 col-sm-1" *ngFor="let j of flightDetails">
+            <button (click)="passengerCheckinInFlight(j.sno)" [ngClass]="{'btn-checkin' : j.checkin==true, 
+                  'btn-not-checkin' : j.checkin==false && j.booked==true,
+                  'btn-not-booked':j.booked==false}" class="p-2 mb-4 seat">{{j.sno}}</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">SeatMap Key</h3>
+            <div class="row">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="checkin-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Checked In</p> 
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="not-checkin-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Not Checked In</p> 
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="not-booked-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Not Booked</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row" *ngIf="seatStatus=='infants'">
+      <div class="col-md-8 col-lg-8 col-sm-8">
+        <div class="row">
+          <div class="col-lg-1 col-md-1 col-sm-1" *ngFor="let j of flightDetails">
+            <button [ngClass]="{'btn-checkin' : j.infants==true, 
+                'btn-not-checkin' : j.infants==false && j.booked==true,
+                'btn-not-booked':j.booked==false}" class="p-2 mb-4 seat">{{j.sno}}</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">SeatMap Key</h3>
+            <div class="row">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="checkin-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">With Infants</p> 
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="not-checkin-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Without Infants</p> 
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="not-booked-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Not Booked</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row" *ngIf="seatStatus=='wheelchair'">
+      <div class="col-md-8 col-lg-8 col-sm-8">
+        <div class="row">
+          <div class="col-lg-1 col-md-1 col-sm-1" *ngFor="let j of flightDetails">
+            <button [ngClass]="{'btn-checkin' : j.wheelchair==true, 
+                'btn-not-checkin' : j.wheelchair==false && j.booked==true,
+                'btn-not-booked':j.booked==false}" class="p-2 mb-4 seat">{{j.sno}}</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">SeatMap Key</h3>
+            <div class="row">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="checkin-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Wheelchair Required</p> 
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="not-checkin-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Wheelchair Not Required</p> 
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="not-booked-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Not Booked</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="row" *ngIf="seatStatus=='meal'">
+      <div class="col-md-8 col-lg-8 col-sm-8">
+        <div class="row">
+          <div class="col-lg-1 col-md-1 col-sm-1" *ngFor="let j of flightDetails">
+            <button [ngClass]="{'btn-checkin' : j.meal==true, 
+                'btn-not-checkin' : j.meal==false && j.booked==true,
+                'btn-not-booked':j.booked==false}" class="p-2 mb-4 seat">{{j.sno}}</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-4 col-sm-4">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h3 class="card-title">SeatMap Key</h3>
+            <div class="row">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="checkin-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Meal Required</p> 
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="not-checkin-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Meal Not Required</p> 
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-lg-2 col-md-2 col-sm-2">
+                <div class="not-booked-key"></div>
+              </div>
+              <div class="col-lg-10 col-md-10 col-sm-10">
+                <p style="text-align: left;">Not Booked</p> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

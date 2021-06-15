@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h1 class="text-center text-primary ">Edit Ancillary Service</h1>
+            <form [formGroup]="addMeal" (ngSubmit)="addMealDetails()">
+                      <div class="form-group">
+                          <label for="mealName">Meal Name:</label>
+                          <input type="text" class="form-control" id="mealName" formControlName="mealName" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="price">Price:</label>
+                        <input type="number" class="form-control" id="price" formControlName="price" required>
+                    </div>
+                      <button type="submit" class="btn btn-outline-primary px-5">Submit</button>&nbsp;
+                      <a routerLink="../../flight-meal/{{flightDetails[index].flightid}}"><button type="button" class="btn btn-outline-primary px-5">Go Back</button></a>
+            </form>
+        </div>
+    </div>
+</div>

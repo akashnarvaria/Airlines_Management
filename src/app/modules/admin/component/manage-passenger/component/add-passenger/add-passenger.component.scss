@@ -1,0 +1,31 @@
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .flex-item {
+    padding: 10px;
+    flex: 33%;
+  }
+  .flex-50 {
+    padding: 10px;
+    flex: 50%;
+  }
+ 
+ 
+  
+  /* Responsive layout - makes a one column-layout instead of a two-column layout */
+  @media (max-width: 800px) {
+    .flex-item,.flex-50,.flex-40 {
+      flex: 100%;
+    }
+  }
+
+  input.ng-invalid.ng-touched{
+    border-color: red;
+  }
+  select.ng-invalid.ng-touched{
+    border-color: red;
+  }
