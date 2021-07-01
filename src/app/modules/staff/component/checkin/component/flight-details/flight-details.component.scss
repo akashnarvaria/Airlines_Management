@@ -1,0 +1,16 @@
+  table {
+    width: 100%;
+  }
+
+  tr.mat-header-row {
+    background-color: #343a40!important;
+  }
+
+  .mat-header-cell {
+    color: white;
+  }
+
+  .mat-card:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+  }
+

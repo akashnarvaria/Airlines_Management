@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12">
+        <h1 class="text-center text-primary">Flight Details</h1>
+          <div class="form-group">
+            <input type="text" (keyup)="applyFilter()" class="form-control" name="input" placeholder="Search..."[(ngModel)]="input">
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Flight Id</th>
+              <th scope="col">Flight Name</th>
+              <th scope="col">Ancillary Services</th>
+              <th scope="col">Special Meals</th>
+              <th scope="col">Shopping Items</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let flightDetail of flightDetail">
+              <th scope="row">{{flightDetail.flightid}}</th>
+              <td>{{flightDetail.name}}</td>
+              <td><a routerLink="../flight-ancillary/{{flightDetail.flightid}}">Click here for details</a></td>
+              <td><a routerLink="../flight-meal/{{flightDetail.flightid}}">Click here for details</a></td>
+              <td><a routerLink="../shopping-items/{{flightDetail.flightid}}">Click here for details</a></td>
+            </tr>
+          </tbody>
+        </table>
+  
+  
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,1646 @@
+{
+  "passenger": [
+    {
+      "id": 1,
+      "flightid": 1,
+      "flightname":"Indigo",
+      "name": "pass1",
+      "seatNo": "A1",
+      "ancillary": {
+        "mealRequired":true,
+        "meal": [
+          {
+            "id":1,
+            "mealName":"sandwich"
+          },
+          {
+            "id":2,
+            "mealName":"tea"
+          }
+        ],
+        "serviceRequired":true,
+        "services":[
+          {
+            "id":1,
+            "service":"priority boarding",
+            "required":true
+          },
+          {
+            "id":2,
+            "service":"wifi",
+            "required":true
+          } 
+        ]
+      },
+      "inflightshop": {
+        "enabled": true,
+        "items": [
+          {
+            "id":1,
+            "itemLink":"https://cdn4.ethoswatches.com/the-watch-guide/wp-content/uploads/2019/05/Ten-Best-Bronze-Watches-MM.jpg",
+            "item":"watch",
+            "price":6779,
+            "quantity":1
+          }
+        ]
+      },
+      "checkin":true,
+      "wheelchair":true,
+      "infants":true,
+      "passport":{
+        "provided":false,
+        "passportNo":"NA"
+      },
+      "address":{
+        "provided":true,
+        "address":"CRPF Camp"
+      },
+      "dob":{
+        "provided":true,
+        "dob":"1999-02-25"
+      }
+    },
+    {
+      "id": 2,
+      "flightid": 2,
+      "flightname":"Spicejet",
+      "name": "pass2",
+      "seatNo": "A2",
+      "ancillary": {
+        "mealRequired":false,
+        "meal":[{}],
+        "serviceRequired":true,
+        "services":[
+          {
+            "id":2,
+            "service":"wifi",
+            "required":true
+          } 
+        ]
+      },
+      "inflightshop": {
+        "enabled": false,
+        "items":[{}]
+      },
+      "checkin":true,
+      "wheelchair":false,
+      "infants":true,
+      "passport":{
+        "provided":false,
+        "passportNo":"NA"
+      },
+      "address":{
+        "provided":true,
+        "address":"CRPF Camp"
+      },
+      "dob":{
+        "provided":true,
+        "dob":"1997-10-22"
+      }
+    },
+    {
+      "id": 3,
+      "flightid": 1,
+      "flightname":"Indigo",
+      "name": "pass3",
+      "seatNo": "A2",
+      "ancillary": {
+        "mealRequired":true,
+        "meal": [
+          {
+            "id":1,
+            "mealName":"sandwich"
+          },
+          {
+            "id":3,
+            "mealName":"maggi"
+          }
+          
+        ],
+        "serviceRequired":true,
+        "services":[
+          {
+            "id":1,
+            "service":"priority boarding",
+            "required":true
+          },
+          {
+            "id":2,
+            "service":"wifi",
+            "required":true
+          } 
+        ]
+      },
+      "inflightshop": {
+        "enabled": true,
+        "items": [
+          {
+            "id":2,
+            "itemLink":"https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1619487269-tr3mmst080-shoe-angle-global-mens-tree-runner-mist-white-b11537e4-5c45-4443-a1dd-c70c31779715-png-1619487255.jpg?crop=1xw:1xh;center,top&resize=480:*",
+            "item":"shoes",
+            "price":9988,
+            "quantity":1
+          }
+          
+        ]
+      },
+      "checkin":true,
+      "wheelchair":false,
+      "infants":true,
+      "passport":{
+        "provided":false,
+        "passportNo":"s7894r5"
+      },
+      "address":{
+        "provided":true,
+        "address":"CRPF Camp"
+      },
+      "dob":{
+        "provided":true,
+        "dob":"1998-09-09"
+      }
+    }
+  ],
+  "userRoles": [
+    {
+      "email": "akashnarvaria9@gmail.com",
+      "role": "staff"
+    },
+    {
+      "email": "akashnarwaria@gmail.com",
+      "role": "admin"
+    }
+  ],
+  "flight": [
+    {
+      "flightid": 1,
+      "name": "Indigo",
+      "arrival": "10:45",
+      "departure": "11:15",
+      "seats": [
+        {
+          "sno": "A1",
+          "checkin": true,
+          "available": false,
+          "booked": true,
+          "wheelchair":true,
+          "infants":true,
+          "meal":true
+        },
+        {
+          "sno": "A2",
+          "checkin": true,
+          "available": false,
+          "booked": true,
+          "wheelchair":false,
+          "infants":true,
+          "meal":true
+        },
+        {
+          "sno": "A3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A10",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B1",
+          "checkin": false,
+          "available":true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B2",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B10",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C1",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C2",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C10",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D1",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D2",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D10",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E1",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E2",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E10",
+          "checkin": false,
+          "available":true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F1",
+          "checkin": false,
+          "available":true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F2",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F10",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        }
+      ],
+      "ancillary": {
+        "meal": [
+          {
+            "id":1,
+            "mealName":"sandwich",
+            "price":599
+          },
+          {
+            "id":2,
+            "mealName":"tea",
+            "price":159
+          },
+          {
+            "id":3,
+            "mealName":"maggi",
+            "price":350
+          },
+          {
+            "id":4,
+            "mealName":"dry fruits",
+            "price":450
+          },
+          {
+            "id":5,
+            "mealName":"samosa",
+            "price":180
+          },
+          {
+            "id":6,
+            "mealName":"cold drink",
+            "price":185
+          },
+          {
+            "id":7,
+            "mealName":"coffee",
+            "price":165
+          },
+          {
+            "id":8,
+            "mealName":"cookies",
+            "price":360
+          },
+          {
+            "id":9,
+            "mealName":"juice",
+            "price":255
+          }
+        ],
+        "services":[
+          {
+            "id":1,
+            "service":"priority boarding"
+          },
+          {
+            "id":2,
+            "service":"wifi"
+          } 
+        ]
+      },
+      "shopItems": [
+        {
+          "id":1,
+          "itemLink":"https://cdn4.ethoswatches.com/the-watch-guide/wp-content/uploads/2019/05/Ten-Best-Bronze-Watches-MM.jpg",
+          "item":"watch",
+          "price":6779
+        },
+        {
+          "id":2,
+          "itemLink":"https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1619487269-tr3mmst080-shoe-angle-global-mens-tree-runner-mist-white-b11537e4-5c45-4443-a1dd-c70c31779715-png-1619487255.jpg?crop=1xw:1xh;center,top&resize=480:*",
+          "item":"shoes",
+          "price":9988
+        },
+        {
+          "id":3,
+          "itemLink":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn4g_J5sWcAuNb6j-ebWil1BceYcz8K8M79A&usqp=CAU",
+          "item":"t-shirt",
+          "price":1200
+        }
+      ]
+    },
+    {
+      "flightid": 2,
+      "name": "Spicejet",
+      "arrival": "20:00",
+      "departure": "21:00",
+      "seats": [
+        {
+          "sno": "A1",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A2",
+          "checkin": true,
+          "available": false,
+          "booked": true,
+          "wheelchair":false,
+          "infants":true,
+          "meal":false
+        },
+        {
+          "sno": "A3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A10",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "A12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B1",
+          "checkin": false,
+          "available":true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B2",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B10",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "B12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C1",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C2",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C10",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "C12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D1",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D2",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D10",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "D12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E1",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E2",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E10",
+          "checkin": false,
+          "available":true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "E12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F1",
+          "checkin": false,
+          "available":true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F2",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F3",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F4",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F5",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F6",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F7",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F8",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F9",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F10",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F11",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        },
+        {
+          "sno": "F12",
+          "checkin": false,
+          "available": true,
+          "booked": false,
+          "wheelchair":false,
+          "infants":false,
+          "meal":false
+        }
+      ],
+      "ancillary": {
+        "meal": [
+          {
+            "id":1,
+            "mealName":"sandwich",
+            "price":599
+          },
+          {
+            "id":2,
+            "mealName":"tea",
+            "price":159
+          },
+          {
+            "id":3,
+            "mealName":"maggi",
+            "price":350
+          },
+          {
+            "id":4,
+            "mealName":"dry fruits",
+            "price":450
+          },
+          {
+            "id":5,
+            "mealName":"samosa",
+            "price":180
+          },
+          {
+            "id":6,
+            "mealName":"cold drink",
+            "price":185
+          },
+          {
+            "id":7,
+            "mealName":"coffee",
+            "price":165
+          },
+          {
+            "id":8,
+            "mealName":"cookies",
+            "price":360
+          },
+          {
+            "id":9,
+            "mealName":"juice",
+            "price":255
+          }
+        ],
+        "services":[
+          {
+            "id":1,
+            "service":"priority boarding"
+          },
+          {
+            "id":2,
+            "service":"wifi"
+          } 
+        ]
+      },
+      "shopItems": [
+        {
+          "id":1,
+          "itemLink":"https://cdn4.ethoswatches.com/the-watch-guide/wp-content/uploads/2019/05/Ten-Best-Bronze-Watches-MM.jpg",
+          "item":"watch",
+          "price":6779
+        },
+        {
+          "id":2,
+          "itemLink":"https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1619487269-tr3mmst080-shoe-angle-global-mens-tree-runner-mist-white-b11537e4-5c45-4443-a1dd-c70c31779715-png-1619487255.jpg?crop=1xw:1xh;center,top&resize=480:*",
+          "item":"shoes",
+          "price":9988
+        },
+        {
+          "id":3,
+          "itemLink":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn4g_J5sWcAuNb6j-ebWil1BceYcz8K8M79A&usqp=CAU",
+          "item":"t-shirt",
+          "price":1200
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+<div class="container-fluid">
+
+
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+      <h1 class="text-center text-primary ">View Passenger</h1>
+      <div class="row">
+
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <!-- apply filter by name -->
+          <div class="form-group">
+            <input type="text" (keyup)="applyFilter()" class="form-control" name="input" placeholder="Filter By Name"
+              [(ngModel)]="input">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <!-- apply filter by passport -->
+          <div class="form-group">
+            <input type="text" (keyup)="applyFilterByPassport()" class="form-control" name="address"
+              placeholder="Filter By Passport" [(ngModel)]="passport">
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+          <!-- apply filter by address -->
+          <div class="form-group">
+            <input type="text" (keyup)="applyFilterByAddress()" class="form-control" name="address"
+              placeholder="Filter By Address" [(ngModel)]="address">
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-12 col-lg-12 col-sm-12">
+      <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th style="font-weight: normal;" scope="col">Passenger Name</th>
+            <th style="font-weight: normal;" scope="col">Flight Name</th>
+            <th style="font-weight: normal;" scope="col">Passenger Seat</th>
+            <th style="font-weight: normal;" scope="col">Meal</th>
+            <th style="font-weight: normal;" scope="col">Other Services</th>
+            <th style="font-weight: normal;" scope="col">PassportNo</th>
+            <th style="font-weight: normal;" scope="col">Address</th>
+            <th style="font-weight: normal;" scope="col">DOB (YYYY-MM-DD)</th>
+            <th style="font-weight: normal;" scope="col">Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pDetail of passengerDetail;let i=index">
+            <td scope="row">{{pDetail.name | titlecase}}</td>
+            <td scope="row">{{pDetail.flightname | titlecase}}</td>
+            <td>{{pDetail.seatNo}}</td>
+            <td>
+              <span *ngIf="passengerDetail[i].ancillary.mealRequired">
+                <span *ngFor="let meal of passengerDetail[i].ancillary.meal;let j=index">{{j+1}}) {{meal.mealName |
+                  titlecase}}<br></span>
+              </span>
+              <span *ngIf="!passengerDetail[i].ancillary.mealRequired">No meal taken</span>
+            </td>
+            <td><span *ngIf="!passengerDetail[i].ancillary.serviceRequired">No service taken</span><span
+                *ngIf="passengerDetail[i].ancillary.serviceRequired"><span
+                  *ngFor="let service of passengerDetail[i].ancillary.services;let k=index">{{k+1}}) {{service.service |
+                  titlecase}}<br></span></span></td>
+            <td>{{pDetail.passport.passportNo}}</td>
+            <td>{{pDetail.address.address}}</td>
+            <td>{{pDetail.dob.dob}}</td>
+            <td><a routerLink="../edit-passenger/{{pDetail.id}}"><i class="fas fa-edit"></i></a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

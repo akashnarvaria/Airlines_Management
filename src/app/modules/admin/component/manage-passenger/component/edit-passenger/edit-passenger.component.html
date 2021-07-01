@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+            <h1 class="text-center text-primary ">Edit Passenger</h1>
+            <form [formGroup]="updatePassenger" (ngSubmit)="editPassenger()">
+                <div class="flex-container">
+                    <div class="form-group flex-item">
+                        <label for="id">Id:</label>
+                        <input type="number" class="form-control" id="id" formControlName="id" readonly="true">
+                      </div>
+                      <div class="form-group flex-item">
+                          <label for="name">Name:</label>
+                          <input type="text" class="form-control" id="name" formControlName="name" required>
+                      </div>
+                      <div class="form-group flex-item">
+                          <label for="flightName">Flight Name:</label>
+                          <input type="text" class="form-control" id="flightName" formControlName="flightName" readonly="true">
+                      </div>
+                      <div class="form-group flex-item">
+                          <label for="seatNo">Seat No:</label>
+                          <input type="text" class="form-control" id="seatNo" formControlName="seatNo" readonly="true">
+                      </div>
+                      <div class="form-group flex-item">
+                          <label for="passportNo">Passport No:</label>
+                          <input type="text" class="form-control" id="passportNo" formControlName="passportNo">
+                      </div>
+                      <div class="form-group flex-item">
+                          <label for="address">Address:</label>
+                          <input type="text" class="form-control" id="address" formControlName="address">
+                      </div>
+                      <div class="form-group" style="flex:100%">
+                          <label for="dob">Date Of Birth:</label>
+                          <input type="date" class="form-control" id="dob" formControlName="dob" >
+                      </div>
+                      <div class="flex-item"></div>
+                      <button type="submit" class="btn btn-primary px-5" [disabled]="!updatePassenger.valid">Submit</button>
+                      <div class="flex-item"></div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+</div>

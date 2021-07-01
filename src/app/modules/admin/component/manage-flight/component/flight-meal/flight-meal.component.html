@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 col-lg-12 col-sm-12">
+        <h1 class="text-center text-primary">Meal Details</h1>
+          <div class="form-group">
+            <input type="text" (keyup)="applyFilter()" class="form-control" name="input" placeholder="Search..."[(ngModel)]="input">
+          </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <table class="table">
+          <thead class="thead-dark">
+            <tr>
+              <th style="font-weight: normal;" scope="col">Meal Name</th>
+              <th style="font-weight: normal;" scope="col">Price</th>
+              <th style="font-weight: normal;" scope="col">Edit Meal</th>
+              <th style="font-weight: normal;" scope="col">Delete Meal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let mealDetail of flightMealDetail;let i=index">
+              <td scope="row">{{mealDetail.mealName | titlecase}}</td>
+              <td scope="row">{{mealDetail.price}}</td>
+              <td><a routerLink="../../edit-meal/{{flightDetails[index].flightid}}/{{i}}"><i class="fas fa-edit"></i></a></td>
+              <td><a (click)="onDelete(i)" style="color: dodgerblue;"><i class="fa fa-trash" aria-hidden="true"></i></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+        <div class="add-icon">
+            <a routerLink="../../add-meal/{{flightDetails[index].flightid}}" style="color: dodgerblue;"><i class="fa fa-plus" aria-hidden="true"></i><br></a>
+        </div>
+  </div>

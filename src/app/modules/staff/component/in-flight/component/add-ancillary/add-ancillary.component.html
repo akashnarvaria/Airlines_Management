@@ -1,0 +1,31 @@
+<div class="container mb-5">
+  <div *ngIf="isLoading" class="text-center">
+    <app-loading-spinner></app-loading-spinner>
+  </div>
+    <div class="row mt-5" *ngIf="!isLoading">
+        <div class="col-lg-6 col-md-6 col-sm-6">
+            <div class="form-group">
+                <h3 style="font-weight: bold;">Your Ancillary Service Preference</h3>
+                <div >
+                  <span class="form-control" *ngFor="let service of passengerDetail.services;let k=index">{{k+1}}) {{service.service}}<br></span>
+                 </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6" *ngIf="!isLoading">   
+            <form (ngSubmit)="changeAncillary(form)" #form="ngForm">
+                <div>
+                    <h3 style="font-weight: bold;">Change Ancillary</h3>
+                    <select  class="custom-select" multiple [(ngModel)]="serviceId" name="ancillary">
+                      <option *ngFor="let service of flightAncillaryDetails" [selected]="isInclude(service.service)" value="{{service.id}}">{{service.service | titlecase}}</option>
+                    </select>
+                    <div class="mt-3">
+                      <button class="btn btn-outline-success w-100" type="submit">Submit</button>
+                    </div>
+                  </div>
+                </form>
+                <button class="btn btn-primary mt-5 float-right" routerLink="../../ancillary-details/{{passengerDetails[index].id}}">GO BACK</button>
+        </div>
+        
+    </div>
+    
+</div>
