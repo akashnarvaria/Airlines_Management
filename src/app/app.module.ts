@@ -19,6 +19,12 @@ import { MyMaterialModule } from  './material/material.module';
 import {MatTableModule} from '@angular/material/table';
 
 
+import { StoreModule } from '@ngrx/store';
+import * as fromApp from './store/app.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffects } from './modules/auth/store/auth.effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -37,6 +43,9 @@ import {MatTableModule} from '@angular/material/table';
     MatSliderModule,
     MyMaterialModule,
     MatTableModule
+    StoreModule.forRoot(fromApp.appReducer),
+    EffectsModule.forRoot([AuthEffects]),
+    StoreDevtoolsModule.instrument({logOnly:environment.production})
   ],
   
   providers: [{

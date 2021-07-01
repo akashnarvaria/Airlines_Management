@@ -15,7 +15,7 @@ import { EditInFlightShopComponent } from './component/in-flight/component/edit-
 
 const routes: Routes = [
   
-  { path: '', component: StaffComponent,children:[
+  { path: '', component: StaffComponent,canActivate:[AuthGuardStaff],children:[
     
     { path:'checkin', component:CheckinComponent, children:[
       {path:'flight-details' , component:FlightDetailsComponent},

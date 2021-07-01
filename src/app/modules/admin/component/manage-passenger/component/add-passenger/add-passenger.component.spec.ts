@@ -10,7 +10,7 @@ describe('AddPassengerComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ AddPassengerComponent ],
-      imports: [HttpClientTestingModule, RouterTestingModule]
+      imports: [HttpClientTestingModule, RouterTestingModule]s
     })
     .compileComponents();
   });

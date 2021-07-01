@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuardAdmin } from '../auth/service/auth.guard.admin';
 import { AdminComponent } from './admin.component';
 import { AddFlightAncillaryComponent } from './component/manage-flight/component/add-flight-ancillary/add-flight-ancillary.component';
 import { AddFlightMealComponent } from './component/manage-flight/component/add-flight-meal/add-flight-meal.component';
@@ -17,7 +18,7 @@ import { ViewPassengerComponent } from './component/manage-passenger/component/v
 import { ManagePassengerComponent } from './component/manage-passenger/manage-passenger.component';
 
 const routes: Routes = [
-  { path: '', component: AdminComponent,children:[
+  { path: '', component: AdminComponent,canActivate:[AuthGuardAdmin],children:[
     {path:'manage-passenger',component:ManagePassengerComponent,children:[
       {path:'view-passenger', component:ViewPassengerComponent},
       {path:'add-passenger',component:AddPassengerComponent},
