@@ -4,7 +4,7 @@ import { AuthComponent } from './auth.component';
 import { ForgetPasswordComponent } from './component/forget-password/forget-password.component';
 import { AuthGuardAuth } from './service/auth.guard.auth';
 
-const routes: Routes = [{ path: '', component: AuthComponent},
+const routes: Routes = [{ path: '', component: AuthComponent, canActivate:[AuthGuardAuth]},
   {path:'forget-password',component:ForgetPasswordComponent}
 ];
 

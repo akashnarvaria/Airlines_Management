@@ -14,8 +14,12 @@ import { AuthGuardStaff } from './modules/auth/service/auth.guard.staff';
 import { AuthGuardAuth } from './modules/auth/service/auth.guard.auth';
 import { CommonService } from './shared/service/common.service';
 import { SharedModule } from './shared/shared.module';
-
-
+import { StoreModule } from '@ngrx/store';
+import * as fromApp from './store/app.reducer';
+import { EffectsModule } from '@ngrx/effects';
+import { AuthEffects } from './modules/auth/store/auth.effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,10 @@ import { SharedModule } from './shared/shared.module';
     HttpClientModule,
     SocialLoginModule,
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    StoreModule.forRoot(fromApp.appReducer),
+    EffectsModule.forRoot([AuthEffects]),
+    StoreDevtoolsModule.instrument({logOnly:environment.production})
   ],
   
   providers: [{

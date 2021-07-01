@@ -9,7 +9,7 @@ import * as fromApp from '../../../store/app.reducer';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuardStaff implements CanActivate {
+export class AuthGuardAdmin implements CanActivate {
 
   constructor(private authService: AuthService, private router: Router, private store: Store<fromApp.AppState>) { }
 
@@ -24,11 +24,10 @@ export class AuthGuardStaff implements CanActivate {
       take(1),
       map(authState=>{
         role=authState.role;
-        console.log(role);
         return authState.user;
       }),
       map(user => {
-        if (!!user && role == "staff") {
+        if (!!user && role == "admin") {
           return true;
         }
         return this.router.createUrlTree(['/auth']);

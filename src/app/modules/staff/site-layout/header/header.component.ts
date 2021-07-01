@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/modules/auth/service/auth.service';
+import { Store } from '@ngrx/store';
+import * as fromApp from '../../../../store/app.reducer';
+import * as AuthActions from '../../../auth/store/auth.actions';
 
 @Component({
   selector: 'app-header',
@@ -8,12 +10,12 @@ import { AuthService } from 'src/app/modules/auth/service/auth.service';
 })
 export class HeaderComponent implements OnInit {
   
-  constructor(private authService:AuthService) { }
+  constructor(private store:Store<fromApp.AppState>) { }
 
   ngOnInit(): void {
   }
 
   onLogout(){
-    this.authService.logout();
+    this.store.dispatch(new AuthActions.Logout());
   }
 }
