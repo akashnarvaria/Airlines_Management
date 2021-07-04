@@ -105,8 +105,8 @@ export class AddPassengerComponent implements OnInit {
         "items": [{}]
       },
       "checkin": false,
-      "wheelchair": (this.addPassenger.get('infants').value==='true'),
-      "infants": (this.addPassenger.get('wheelchair').value==='true'),
+      "wheelchair": (this.addPassenger.get('wheelchair').value==='true'),
+      "infants": (this.addPassenger.get('infants').value==='true'),
       "passport": {
         "provided": isPassport,
         "passportNo": passportNo

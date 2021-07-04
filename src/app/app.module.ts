@@ -42,7 +42,7 @@ import { environment } from '../environments/environment';
     SharedModule,
     MatSliderModule,
     MyMaterialModule,
-    MatTableModule
+    MatTableModule,
     StoreModule.forRoot(fromApp.appReducer),
     EffectsModule.forRoot([AuthEffects]),
     StoreDevtoolsModule.instrument({logOnly:environment.production})

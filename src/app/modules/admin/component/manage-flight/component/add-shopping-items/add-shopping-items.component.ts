@@ -61,7 +61,7 @@ export class AddShoppingItemsComponent implements OnInit {
       this.commonService.passengerCheckinInFlight(this.flightDetails).subscribe(()=>{
         this.getFlightDetails();
         alert('Added Successfully');
-        this.router.navigate(['../../../shopping-items/'+this.flightDetails[this.index].flightid],{relativeTo:this.route});
+        this.router.navigate(['../../shopping-items/'+this.flightDetails[this.index].flightid],{relativeTo:this.route});
       });
       
     }

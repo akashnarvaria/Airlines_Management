@@ -34,11 +34,11 @@ export class ViewPassengerComponent implements OnInit {
       if(this.input!=''){
         this.passengerDetail=[];
         for(let i=0;i<passengerDetails.length;i++){
-          if(passengerDetails[i].name==this.input){
+          if(passengerDetails[i].name.toUpperCase()==this.input.toUpperCase()){
             this.passengerDetail.push(passengerDetails[i]);
           }
         }
-  
+
       }
       else{
         this.passengerDetail=this.passengerDetails;

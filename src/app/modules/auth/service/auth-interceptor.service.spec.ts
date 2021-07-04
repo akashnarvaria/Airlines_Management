@@ -15,7 +15,5 @@ describe('AuthInterceptorService', () => {
     service = TestBed.inject(AuthInterceptorService);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+  
 });
